@@ -1,0 +1,45 @@
+/* --------------------------- *\
+            NAVBAR
+\* --------------------------- */
+
+.navbar {
+    height: 59px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+}
+
+    .navbar__link {
+        height: inherit;
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-black);
+        text-decoration: none;
+    }
+
+    .navbar__link--logo {
+        position: absolute;
+        top: 0;
+        left: 24px;
+    }
+
+        .navbar__image {
+            width: 25px;
+            vertical-align: top;
+        }
+
+    .navbar__link--about {
+        grid-column-start: 6;
+    }
+
+    .navbar__link--social {
+        grid-column-start: 10;
+    }
+
+    .navbar__link--contact {
+        grid-column-start: 12;
+    }

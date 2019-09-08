@@ -10,9 +10,6 @@ html {
 body {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 24px;
     background-color: var(--color-gray);
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
 }
