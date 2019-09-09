@@ -21,6 +21,12 @@
     column-gap: 30px;
 }
 
+@media (max-width: 1218px) {
+    .navbar {
+        margin: 0 24px;
+    }
+}
+
     .navbar__link {
         height: inherit;
         display: flex;
@@ -30,6 +36,9 @@
         font-weight: 600;
         color: var(--color-black);
         text-decoration: none;
+    }
+    .navbar__link:hover {
+        text-decoration: line-through;
     }
 
     .navbar__link--logo {
@@ -53,4 +62,5 @@
 
     .navbar__link--contact {
         grid-column-start: 12;
+        margin-right: 24px;
     }

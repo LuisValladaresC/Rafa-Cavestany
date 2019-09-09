@@ -3,8 +3,8 @@
 \* --------------------------- */
 
 #footer {
-    height: 59px;
-    margin-top: 112px;
+    margin-top: 136px;
+    margin-bottom: 32px;
 
     display: flex;
     align-items: center;
