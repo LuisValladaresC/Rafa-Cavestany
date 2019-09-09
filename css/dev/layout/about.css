@@ -1,0 +1,42 @@
+/* --------------------------- *\
+            ABOUT ME
+\* --------------------------- */
+
+#about_me {
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+}
+#about_me.active {
+    display: grid;
+}
+
+    .main__title--about {
+        grid-column: 5 span;
+    }
+    
+    .about__content {
+        line-height: 1.5;
+        color: var(--color-black);
+        margin-top: 133px;
+        grid-column: 6 span;
+    }
+
+        .about__text {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 1.5em 0;
+        }
+        .about__text:first-of-type {
+            margin-top: 0;
+        }
+        .about__text:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        .about__title {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.1;
+            /* margin: 24px 0; */
+        }

@@ -13,3 +13,13 @@ body {
     padding: 0 24px;
     background-color: var(--color-gray);
 }
+
+.main__title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--color-black);
+
+    margin: 144px 0 32px;
+}

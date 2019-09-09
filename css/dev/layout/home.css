@@ -2,14 +2,11 @@
               HOME
 \* --------------------------- */
 
-.home__title {
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: var(--color-black);
-
-    margin: 144px 0 32px;
+#home {
+    display: none;
+}
+#home.active {
+    display: block;
 }
 
 .home__section {
