@@ -4,15 +4,16 @@
 
 #footer {
     height: 59px;
-    margin-top: 105px;
+    margin-top: 112px;
 
     display: flex;
     align-items: center;
 }
 
-    .footer__text {
+    .footer__copyright {
         font-size: 14px;
         font-weight: 500;
         line-height: 1;
         color: var(--color-black);
+        margin: 0;
     }

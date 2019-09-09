@@ -45,9 +45,12 @@
             grid-column: 7 span;
         }
 
-    .section__image--hero {
+    .section__image {
         width: 100%;
         vertical-align: top;
+    } 
+
+    .section__image--hero {
         grid-column: 10 span;
     } 
 
@@ -56,14 +59,10 @@
         
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
+        column-gap: 30px;
+        row-gap: 32px;
     }
 
-        .section__link--galery {
+        .section__link {
             grid-column: 2 span;
         }
-
-            .section__image--galery {
-                width: 100%;
-                vertical-align: top;
-            }
