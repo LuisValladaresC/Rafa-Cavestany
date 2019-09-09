@@ -1,0 +1,18 @@
+/* --------------------------- *\
+              FOOTER
+\* --------------------------- */
+
+#footer {
+    height: 59px;
+    margin-top: 105px;
+
+    display: flex;
+    align-items: center;
+}
+
+    .footer__text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--color-black);
+    }

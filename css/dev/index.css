@@ -3,4 +3,6 @@
 @import './base/tipografia.css';
 @import './base/base.css';
 
-@import './layout/navbar.css';
+@import './layout/header.css';
+@import './layout/home.css';
+@import './layout/footer.css';
