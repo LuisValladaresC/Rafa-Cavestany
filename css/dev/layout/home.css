@@ -49,17 +49,18 @@
 
         .section__image--hero {
             grid-column: 10 span;
-        } 
+        }
+        @media (max-width: 768px) {
+            .section__image--hero {
+                grid-column: 12 span;
+            }
+        }
 
         .section__galery {
             grid-column: 12 span;
             
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             column-gap: 30px;
             row-gap: 32px;
         }
-
-            .section__link {
-                grid-column: 2 span;
-            }

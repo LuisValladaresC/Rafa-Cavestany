@@ -1,8 +1,10 @@
 /* ------------------------------------------------------------ */
-/* DEFINE LA SECCION QUE MOSTRARA EL INDEX CUANDO CAMBIA LA URL */
+/* CARGA LA SECCION QUE MOSTRARA EL INDEX SEGUN LA URL DEFINIDA */
 /* ------------------------------------------------------------ */
 
 const $main_sections = Array.from(document.getElementsByClassName('main_section'));
+const $navbar_options = Array.from(document.getElementsByClassName('navbar__link'));
+console.log($navbar_options);
 const $menu_options = Array.from(document.getElementsByClassName('menu__link'));
 
 window.addEventListener('popstate', load_section);
@@ -12,12 +14,14 @@ function load_section() {
 
     $main_sections.map(($section, index) => {
         $section.classList.remove('active');
+        $navbar_options[index].classList.remove('active');
         $menu_options[index].classList.remove('active')
 
         if (document.location.href.includes($section.id)) {
             if (!centinela) {
                 $section.classList.add('active');
-                $menu_options[index].classList.add('active')
+                $navbar_options[index].classList.add('active');
+                $menu_options[index].classList.add('active');
             }
             centinela = true;
         }
@@ -25,15 +29,16 @@ function load_section() {
 
     if (!centinela) {
         $main_sections[0].classList.add('active');
-        $menu_options[0].classList.add('active')
+        $navbar_options[0].classList.add('active');
+        $menu_options[0].classList.add('active');
     }
 }
 
 load_section();
 
-/* -------------------------------------------------------- */
-/* TRABAJAMOS CON EL MENU DESPLEGABLE EN VERSION RESPONSIVE */
-/* -------------------------------------------------------- */
+/* --------------------------------- */
+/* MENU DESPLEGABLE EN VERSION MOVIL */
+/* --------------------------------- */
 
 const $menu = document.getElementById('menu');
 const $menu_button = document.getElementById('menu_button');
