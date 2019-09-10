@@ -6,60 +6,60 @@
     display: none;
 }
 #home.active {
-    display: block;
-}
-
-.home__section {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
 }
 
-    .section__header {
-        margin: 184px 0;
-        grid-column: 12 span;
-
+    .home__section {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 30px;
     }
 
-        .section__title,
-        .section__description {
-            font-size: 14px;
-            line-height: 1;
-            color: var(--color-black);
-            margin: 0;
-        }
-        
-        .section__title {
-            font-weight: 600;
-            grid-column: 5 span;
+        .section__header {
+            margin: 184px 0;
+            grid-column: 12 span;
+
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 30px;
         }
 
-        .section__description {
-            font-weight: 500;
-            grid-column: 7 span;
+            .section__title,
+            .section__description {
+                font-size: 14px;
+                line-height: 1;
+                color: var(--color-black);
+                margin: 0;
+            }
+            
+            .section__title {
+                font-weight: 600;
+                grid-column: 5 span;
+            }
+
+            .section__description {
+                font-weight: 500;
+                grid-column: 7 span;
+            }
+
+        .section__image {
+            width: 100%;
+            vertical-align: top;
+        } 
+
+        .section__image--hero {
+            grid-column: 10 span;
+        } 
+
+        .section__galery {
+            grid-column: 12 span;
+            
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 30px;
+            row-gap: 32px;
         }
 
-    .section__image {
-        width: 100%;
-        vertical-align: top;
-    } 
-
-    .section__image--hero {
-        grid-column: 10 span;
-    } 
-
-    .section__galery {
-        grid-column: 12 span;
-        
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 30px;
-        row-gap: 32px;
-    }
-
-        .section__link {
-            grid-column: 2 span;
-        }
+            .section__link {
+                grid-column: 2 span;
+            }

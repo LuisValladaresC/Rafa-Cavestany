@@ -1,0 +1,31 @@
+@media (max-width: 375px) {
+    
+    /* --------- HEADER ---------- */
+
+    #header {
+        position: absolute;
+        padding-top: 32px;
+    }
+    
+        .header__navbar {
+            height: initial;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .navbar__link--logo {
+                position: initial;
+            }
+
+            .navbar__link--about,
+            .navbar__link--social,
+            .navbar__link--contact {
+                display: none;
+            }
+
+        .navbar__menu {
+            display: block;
+        }
+}

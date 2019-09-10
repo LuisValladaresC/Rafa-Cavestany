@@ -8,3 +8,5 @@
 @import './layout/footer.css'; 
 @import './layout/about.css'; 
 @import './layout/social.css'; 
+
+@import './base/mobile.css'; 
