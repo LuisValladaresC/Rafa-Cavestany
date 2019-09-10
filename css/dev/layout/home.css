@@ -6,7 +6,7 @@
     display: none;
 }
 #home.active {
-    display: grid;
+    display: block;
 }
 
     .home__section {
@@ -16,7 +16,7 @@
     }
 
         .section__header {
-            margin: 184px 0;
+            padding: 184px 0;
             grid-column: 12 span;
 
             display: grid;

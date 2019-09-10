@@ -1,4 +1,15 @@
 @media (max-width: 375px) {
+
+    /* -------- GENERALES -------- */
+
+    body {
+        padding: 0;
+    }
+
+    .main__title {
+        padding: 403px 24px 0;
+    }
+
     
     /* --------- HEADER ---------- */
 
@@ -28,4 +39,46 @@
         .navbar__menu {
             display: block;
         }
+
+    /* ---------- HOME ----------- */
+
+    .home__section {
+        display: block;
+    }
+
+        .section__header {
+            grid-template-columns: 5fr 7fr;
+        }
+
+        .section__header--hero {
+            padding: 40px 24px 24px;
+        }
+        .section__header--books {
+            padding: 112px 24px 80px;
+        }
+        .section__header--music {
+            padding: 112px 24px 51px;
+        }
+
+            .section__title,
+            .section__description {
+                grid-column: 1 span;
+            } 
+
+        .section__galery {
+            padding: 0 24px;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 27px;
+        }
+
+            .section__link {
+                grid-column: 1 span;
+            }
+
+    /* --------- FOOTER ---------- */
+
+    #footer {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
 }
