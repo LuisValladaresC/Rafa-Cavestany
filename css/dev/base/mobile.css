@@ -96,6 +96,22 @@
                 line-height: 1.57;
             }
 
+    /* ----- SOCIAL / CONTACT ---- */
+
+    #social.active, 
+    #contact.active {
+        display: block;
+    }
+        
+        .social__content {
+            margin: 40px 24px 0;
+        }
+
+            .social__link {
+                font-size: 14px;
+                line-height: 1.57;
+            }
+
     /* --------- FOOTER ---------- */
 
     #footer {
