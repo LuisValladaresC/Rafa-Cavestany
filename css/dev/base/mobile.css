@@ -75,6 +75,27 @@
                 grid-column: 1 span;
             }
 
+    /* -------- ABOUT ME --------- */
+
+    #about_me.active {
+        display: block;
+    }
+
+        .about__content {
+            line-height: 1.57;
+            margin: 40px 24px 0;
+        }
+
+            .about__text {
+                font-size: 14px;
+            }
+
+            .about__title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.57;
+            }
+
     /* --------- FOOTER ---------- */
 
     #footer {
