@@ -1,8 +1,8 @@
-/* ------------------------------------------------------------ */
-/* CARGA LA SECCION QUE MOSTRARA EL INDEX SEGUN LA URL DEFINIDA */
-/* ------------------------------------------------------------ */
+/* ------------------------------------------------- */
+/* MUESTRA LA SECCION SEGUN EL ID DEFINIDO EN LA URL */
+/* ------------------------------------------------- */
 
-const $main_sections = Array.from(document.getElementsByClassName('main_section'));
+const $main_sections = Array.from(document.getElementsByClassName('main__section'));
 const $navbar_options = Array.from(document.getElementsByClassName('navbar__link'));
 console.log($navbar_options);
 const $menu_options = Array.from(document.getElementsByClassName('menu__link'));
