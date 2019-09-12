@@ -6,8 +6,11 @@
     margin-top: 136px;
     margin-bottom: 32px;
 
-    display: flex;
+    display: none;
     align-items: center;
+}
+#footer.active {
+    display: flex;
 }
 
     .footer__copyright {

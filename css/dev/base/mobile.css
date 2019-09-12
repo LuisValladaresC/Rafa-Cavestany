@@ -54,13 +54,13 @@
         }
 
         .section__header--hero {
-            padding: 40px 24px 24px;
+            margin: 40px 24px 24px;
         }
         .section__header--books {
-            padding: 112px 24px 80px;
+            margin: 112px 24px 80px;
         }
         .section__header--music {
-            padding: 112px 24px 51px;
+            margin: 112px 24px 51px;
         }
 
             .section__title,
@@ -97,11 +97,13 @@
 
     /* ----- SOCIAL / CONTACT ---- */
 
-    .social__content {
+    .social__content,
+    .contact__content {
         margin: 40px 24px 0;
     }
 
-        .social__link {
+        .social__link,
+        .contact__link {
             font-size: 14px;
             line-height: 1.57;
         }

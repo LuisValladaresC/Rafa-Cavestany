@@ -9,6 +9,11 @@
     width: 100%;
     z-index: 100;
     background-color: var(--color-gray);
+
+    display: none;
+}
+#header.active {
+    display: block;
 }
 
     .header__navbar {
@@ -37,6 +42,8 @@
             font-weight: 600;
             color: var(--color-black);
             text-decoration: none;
+
+            animation: fade_in 250ms;
         }
         .navbar__link.active,
         .navbar__link:hover {
@@ -47,6 +54,7 @@
             position: absolute;
             top: 0;
             left: 24px;
+            animation: none;
         }
 
             .navbar__image {
@@ -76,6 +84,8 @@
             
             position: relative;
             z-index: 100;
+
+            animation: fade_in 250ms;
         }
 
             .menu__line {

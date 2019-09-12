@@ -10,11 +10,13 @@
     column-gap: 30px;
 }
 
-    .main__title--social {
+    .main__title--social,
+    .main__title--contact {
         grid-column: 5 span;
     }
     
-    .social__content {
+    .social__content,
+    .contact__content {
         margin-top: 135px;
         grid-column: 7 span;
 
@@ -22,7 +24,8 @@
         flex-direction: column;
     }
 
-        .social__link {
+        .social__link,
+        .contact__link {
             font-size: 16px;
             font-weight: 500;
             line-height: 1.5;
@@ -32,13 +35,16 @@
             width: fit-content;
             margin: 0.25em 0;
         }
-        .social__link:first-of-type {
+        .social__link:first-of-type,
+        .contact__link:first-of-type {
             margin-top: 0;
         }
-        .social__link:last-of-type {
+        .social__link:last-of-type,
+        .contact__link:last-of-type {
             margin-bottom: 0;
         }
 
-        .social__link:hover {
+        .social__link:hover,
+        .contact__link:hover {
             text-decoration: line-through;
         }

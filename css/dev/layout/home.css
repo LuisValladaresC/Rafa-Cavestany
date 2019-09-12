@@ -9,7 +9,7 @@
 }
 
     .section__header {
-        padding: 184px 0;
+        margin: 184px 0;
         grid-column: 12 span;
 
         display: grid;
