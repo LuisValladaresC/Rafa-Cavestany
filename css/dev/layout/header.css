@@ -95,11 +95,9 @@
             }
 
             .menu__line--top.active {
-                height: 1px;
                 transform: translateY(calc(5px - 50%)) rotate(-45deg);
             }
             .menu__line--bottom.active {
-                height: 1px;
                 transform: translateY(calc(-5px + 50%)) rotate(45deg);
             }
 
