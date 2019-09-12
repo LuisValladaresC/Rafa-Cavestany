@@ -6,11 +6,14 @@
         padding: 0;
     }
 
+    .main__section.active {
+        display: block;
+    }
+
     .main__title {
         padding: 403px 24px 0;
     }
 
-    
     /* --------- HEADER ---------- */
 
     #header {
@@ -77,40 +80,31 @@
 
     /* -------- ABOUT ME --------- */
 
-    #about_me.active {
-        display: block;
+    .about__content {
+        line-height: 1.57;
+        margin: 40px 24px 0;
     }
 
-        .about__content {
-            line-height: 1.57;
-            margin: 40px 24px 0;
+        .about__text {
+            font-size: 14px;
         }
 
-            .about__text {
-                font-size: 14px;
-            }
-
-            .about__title {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 1.57;
-            }
+        .about__title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.57;
+        }
 
     /* ----- SOCIAL / CONTACT ---- */
 
-    #social.active, 
-    #contact.active {
-        display: block;
+    .social__content {
+        margin: 40px 24px 0;
     }
-        
-        .social__content {
-            margin: 40px 24px 0;
-        }
 
-            .social__link {
-                font-size: 14px;
-                line-height: 1.57;
-            }
+        .social__link {
+            font-size: 14px;
+            line-height: 1.57;
+        }
 
     /* --------- FOOTER ---------- */
 

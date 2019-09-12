@@ -1,0 +1,58 @@
+/* --------------------------- *\
+            LOADER
+\* --------------------------- */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+
+    padding: 21px 24px;
+    background-color: #F4F4F4;
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+
+    transition: 1s;
+    transition-property: width;
+}
+@media (max-width: 475px) {
+    #loader {
+        padding-top: 32px; 
+    }
+}
+
+#loader.hidden {
+    width: 25px;
+    height: 17px;
+    background-color: transparent;
+    animation: loading__end 2s forwards;
+}
+@keyframes loading__end {
+    100% {
+        visibility: hidden;
+    }
+}
+
+    .loader__image {
+        width: 25px;
+        height: 17px;
+        animation: loading .8s infinite alternate-reverse;
+    }
+    .hidden .loader__image {
+        animation: none;
+    }
+
+    @keyframes loading {
+        0% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1.1)
+        }
+    }

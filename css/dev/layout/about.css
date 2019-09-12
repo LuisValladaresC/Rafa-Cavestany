@@ -5,12 +5,8 @@
 #about_me {
     min-height: calc(100vh - 182px);
 
-    display: none;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
-}
-#about_me.active {
-    display: grid;
 }
 
     .main__title--about {

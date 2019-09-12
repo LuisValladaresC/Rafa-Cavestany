@@ -18,6 +18,13 @@ body {
     overflow: hidden;
 }
 
+.main__section {
+    display: none;
+}
+.main__section.active {
+    display: grid;
+}
+
 .main__title {
     font-size: 42px;
     font-weight: 600;

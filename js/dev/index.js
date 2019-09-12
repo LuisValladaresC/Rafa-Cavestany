@@ -1,10 +1,24 @@
+/* ------------------------ */
+/* LOADING DE LA PAGINA WEB */
+/* ------------------------ */
+
+const $loader = document.getElementById('loader');
+const $main = document.querySelector('main');
+
+window.addEventListener("load", () => {
+    $loader.classList.add('hidden');
+    setTimeout(() => {
+        load_section();
+        $main.style.visibility = 'visible';
+    }, 1000)
+})
+
 /* ------------------------------------------------- */
 /* MUESTRA LA SECCION SEGUN EL ID DEFINIDO EN LA URL */
 /* ------------------------------------------------- */
 
 const $main_sections = Array.from(document.getElementsByClassName('main__section'));
 const $navbar_options = Array.from(document.getElementsByClassName('navbar__link'));
-console.log($navbar_options);
 const $menu_options = Array.from(document.getElementsByClassName('menu__link'));
 
 window.addEventListener('popstate', load_section);
@@ -33,8 +47,6 @@ function load_section() {
         $menu_options[0].classList.add('active');
     }
 }
-
-load_section();
 
 /* --------------------------------- */
 /* MENU DESPLEGABLE EN VERSION MOVIL */

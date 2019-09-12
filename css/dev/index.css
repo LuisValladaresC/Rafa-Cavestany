@@ -1,6 +1,7 @@
-@import './base/normalize.css';
-@import './base/variables.css';
+/* @import './base/normalize.css';
+@import './base/loader.css'; */
 @import './base/tipografia.css';
+@import './base/variables.css';
 @import './base/base.css';
 
 @import './layout/header.css';
@@ -9,4 +10,4 @@
 @import './layout/about.css'; 
 @import './layout/social.css'; 
 
-@import './base/mobile.css'; 
+@import './base/mobile.css';
