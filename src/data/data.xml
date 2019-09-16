@@ -1,0 +1,122 @@
+<root>
+    <books>
+        <element>
+            <title>Radical Candor</title>
+            <link>https://www.amazon.com/Radical-Candor-Kim-Scott/dp/B01KTIEFEE</link>
+            <image>src/images/books/book-1.png</image>
+            <image2x>src/images/books/book-1@2x.png</image2x>
+            <image3x></image3x>
+        </element>
+        <element>
+            <title>Hacking Growth</title>
+            <link>https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout-ebook/dp/B01IZTCF6Y</link>
+            <image>src/images/books/book-2.png</image>
+            <image2x>src/images/books/book-2@2x.png</image2x>
+        </element>
+        <element>
+            <title>Measure What Matters</title>
+            <link>https://www.amazon.com/Measure-What-Matters-Google-Foundation-ebook/dp/B078FZ9SYB</link>
+            <image>src/images/books/book-3.png</image>
+            <image2x>src/images/books/book-3@2x.png</image2x>
+        </element>
+        <element>
+            <title>The Stranger</title>
+            <link>https://www.amazon.com/Stranger-Vintage-International-Albert-Camus-ebook/dp/B008QLXSG8</link>
+            <image>src/images/books/book-4.png</image>
+            <image2x>src/images/books/book-4@2x.png</image2x>
+        </element>
+        <element>
+            <title>Who Owns the Future?</title>
+            <link>https://www.amazon.com/Who-Owns-Future-Jaron-Lanier-ebook/dp/B008J2AEY8</link>
+            <image>src/images/books/book-5.png</image>
+            <image2x>src/images/books/book-5@2x.png</image2x>
+        </element>
+        <element>
+            <title>Traction</title>
+            <link>https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2</link>
+            <image>src/images/books/book-6.png</image>
+            <image2x>src/images/books/book-6@2x.png</image2x>
+        </element>
+        <element>
+            <title>Steal Like an Artist</title>
+            <link>https://www.amazon.com/Steal-Like-Artist-Things-Creative-ebook/dp/B0074QGGK6</link>
+            <image>src/images/books/book-7.png</image>
+            <image2x>src/images/books/book-7@2x.png</image2x>
+        </element>
+        <element>
+            <title>Todo es Personal</title>
+            <link>https://www.amazon.com/Todo-Personal-Relaciones-Alcanzar-Spanish-ebook/dp/B00JLL1S1E</link>
+            <image>src/images/books/book-8.png</image>
+            <image2x>src/images/books/book-8@2x.png</image2x>
+        </element>
+    </books>
+
+    <music>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>./src/images/music/music-1.png</image>
+            <image2x>./src/images/music/music-1@2x.png</image2x>
+            <image3x></image3x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-2.png</image>
+            <image2x>src/images/music/music-2@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-3.png</image>
+            <image2x>src/images/music/music-3@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-4.png</image>
+            <image2x>src/images/music/music-4@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-5.png</image>
+            <image2x>src/images/music/music-5@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-6.png</image>
+            <image2x>src/images/music/music-6@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-7.png</image>
+            <image2x>src/images/music/music-7@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-8.png</image>
+            <image2x>src/images/music/music-8@2x.png</image2x>
+        </element>
+        <element>
+            <title></title>
+            <link>https://www.spotify.com</link>
+            <image>src/images/music/music-9.png</image>
+            <image2x>src/images/music/music-9@2x.png</image2x>
+        </element>
+    </music>
+
+    <about_me>
+        <element>I’m a designer, co-founder and CEO of ++hellohello, a human-centric design agency shipping products and experiences for companies all over the world.</element>
+        <element>After 15 years working in all kinds of digital agencies, freelancing and working remotely, I now dedicate my time to build a common place for design, technology, strategy, innovation and creativity.</element>
+        <element>Prior to ++hellohello I co-founded and worked as Product Designer of Oincs, a tool to better serve the community around traffic and safety, designed to take care of people and keep them alert of everything that's happening on the streets, all thanks to the cooperation of users who share and update information in real time to the benefit of all, through a mobile app.</element>
+        <element>With more than 150K registered users in less than a year, organically and without the help of investors, Oincs was declared a sponsor brand of the country and the number one information platform for the major news media in Uruguay, sharing our data on TV news, radios and online newspapers. In addition to Uruguay, Oincs reached 11 countries in the region, positioning itself in the top 3 spots in the app stores rankings of downloads.</element>
+        <element>### How can I help?</element>
+        <element>I love helping designers, engineers, and founders in any way I can. I like to do this in two ways:</element>
+        <element>1. The email in this website is a good place to start and my Twitter DMs are open. Let me know how I can help, ideally with specific questions or problems you're working through. I can be helpful in thinking about job interviews, portfolio presentations, design work, working at startups vs. large companies, building side projects. If I don't reply right away, please follow up – sometimes things slip through the cracks! But I'll do my best to reply quickly.</element>
+        <element>2. If you find yourself in Montevideo, I'd love to meet you for coffee. Just shoot me an email or DM on Twitter and we can find a time. If you have specific questions or problems you’d like to talk about the better. Of course, I won't always have answers, but I think I can be a helpful listener and bounce questions back at you to hopefully provide logical next steps to pursue. If you’d rather just meet and chat casually, that’s fine too!</element>
+    </about_me>
+</root>

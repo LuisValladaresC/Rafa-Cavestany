@@ -1,6 +1,74 @@
-/* ------------------------ */
-/* LOADING DE LA PAGINA WEB */
-/* ------------------------ */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* CON EL OBJETO JSON OBTENIDO DE OTRO SCRIPT EN EL HTML SE CREAN LOS ELEMENTOS DE LA SECCION BOOKS, MUSIC Y ABOUT */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+const $books_galery = document.getElementById("books_galery");
+const $music_galery = document.getElementById("music_galery");
+const $about_content = document.getElementById("about_content");
+
+add_data();
+
+function add_data() {
+    let books = DATA.books || null;
+    let books_template = "";
+    
+    let music = DATA.music || null;
+    let music_template = "";
+    
+    let about_me = DATA.about_me || null;
+    let about_me_template = "";
+
+    if (books) books.map((element) => books_template += create_template($books_galery, element))
+    if (music) music.map((element) => music_template += create_template($music_galery, element))
+    if (about_me) about_me.map((element) => about_me_template += create_template($about_content, element))
+
+    if (books_template) $books_galery.innerHTML = books_template;
+    else document.getElementById("books").style.display = "none";
+
+    if (music_template) $music_galery.innerHTML = music_template;
+    else document.getElementById("music").style.display = "none";
+    
+    if (about_me_template) $about_content.innerHTML = about_me_template;
+    else {
+        document.querySelector(".navbar__link--about").style.display = "none";
+        document.querySelector(".menu__link--about").style.display = "none";
+    }
+}
+
+function create_template($container, data) {
+    var template = "";
+
+    switch ($container) {
+        case $books_galery:
+        case $music_galery:
+            if (data.image) {
+                template = `
+                <a class="section__link" ${data.link ? `href="${data.link}"` : ''} target="_blank">
+                    <img class="section__image" src="${data.image}" alt="${data.title || ''}" 
+                    ${data.image2x || data.image3x ? `srcset="${data.image + ' 1x'}
+                        ${data.image2x ? ',' + data.image2x + ' 2x' : ''} 
+                        ${data.image3x ? ',' + data.image3x + ' 3x' : ''}">`
+                    : '>'}
+                </a>`
+            }
+        break;
+            
+        case about_content:
+            if (data.startsWith("###")) {
+                data = data.replace("###", "");
+                template = `<h3 class="about__title">${data}</h3>`;
+            } else {
+                template = `<p class="about__text">${data}</p>`;
+            }
+        break;
+    }
+
+    return template;
+}
+
+/* -------------------------------------------------------------------- */
+/* ESTABLECE LA FUNCIONALIDAD Y ANIMACION DE LOADING PARA LA PAGINA WEB */
+/* -------------------------------------------------------------------- */
 
 const $loader = document.getElementById('loader');
 const $header = document.getElementById('header');
@@ -13,17 +81,18 @@ window.addEventListener("load", () => {
         $header.classList.add('active');
         $main.style.visibility = 'visible';
 
-
         setTimeout(() => {
             load_section();
             $footer.classList.add('active');
         }, 250);
+        /* 250ms es el tiempo que dura la animacion de fade-in en los elementos del header */
     }, 1000)
+    /* 1000ms es el tiempo que dura la animacion de la clase .loader.hidden */
 })
 
-/* ------------------------------------------------- */
-/* MUESTRA LA SECCION SEGUN EL ID DEFINIDO EN LA URL */
-/* ------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------- */
+/* MUESTRA LA SECCION SEGUN EL ID DEFINIDO EN LA URL LO QUE PERMITE NAVEGAR SIN RECARGAR LA PAGINA WEB */
+/* --------------------------------------------------------------------------------------------------- */
 
 const $main_sections = Array.from(document.getElementsByClassName('main__section'));
 const $navbar_options = Array.from(document.getElementsByClassName('navbar__link'));
@@ -66,9 +135,9 @@ function load_section() {
     add_animations();
 }
 
-/* --------------------------------- */
-/* MENU DESPLEGABLE EN VERSION MOVIL */
-/* --------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* FUNCIONALIDAD Y ANIMACIONES DEL MENU DESPLEGABLE VISIBLE EN LA VERSION MOVIL */
+/* ---------------------------------------------------------------------------- */
 
 const $menu = document.getElementById('menu');
 const $menu_button = document.getElementById('menu_button');
@@ -95,7 +164,7 @@ function show_hide_menu() {
 }
 
 /* ------------------------------------------------------------------------------------- */
-/* SCROLL SPY PARA LOS ELEMENTOS DE LA WEB QUE AÑADE Y QUITA UNA CLASE CON UNA ANIMACION */
+/* SCROLL SPY PARA LOS ELEMENTOS EN LA WEB QUE AÑADE Y QUITA UNA CLASE CON UNA ANIMACION */
 /* ------------------------------------------------------------------------------------- */
 
 // Arreglos de elementos a los que definiremos una animacion
