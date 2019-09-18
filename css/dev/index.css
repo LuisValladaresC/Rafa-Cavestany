@@ -3,6 +3,7 @@
 @import './base/tipografia.css';
 @import './base/variables.css';
 @import './base/base.css';
+@import './base/animations.css';
 
 @import './layout/header.css';
 @import './layout/home.css';

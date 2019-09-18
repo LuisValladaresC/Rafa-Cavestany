@@ -20,11 +20,11 @@
     transition: 1s;
     transition-property: width;
 }
-@media (max-width: 475px) {
+/* @media (max-width: 475px) {
     #loader {
         padding-top: 32px; 
     }
-}
+} */
 
 #loader.hidden {
     width: 25px;

@@ -35,16 +35,12 @@
             grid-column: 7 span;
         }
 
-    .section__image {
-        width: 100%;
-        vertical-align: top;
-    } 
-
-    .section__image--hero {
+    .section__image__container {
         grid-column: 10 span;
+        margin: 0;
     }
     @media (max-width: 768px) {
-        .section__image--hero {
+        .section__image__container {
             grid-column: 12 span;
         }
     }
@@ -57,3 +53,8 @@
         column-gap: 30px;
         row-gap: 32px;
     }
+
+        .section__image {
+            width: 100%;
+            vertical-align: top;
+        } 

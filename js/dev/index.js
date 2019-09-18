@@ -97,42 +97,139 @@ window.addEventListener("load", () => {
 const $main_sections = Array.from(document.getElementsByClassName('main__section'));
 const $navbar_options = Array.from(document.getElementsByClassName('navbar__link'));
 const $menu_options = Array.from(document.getElementsByClassName('menu__link'));
+
 var current_section = $main_sections[0];
 var number_of_active_animations;
 
 window.addEventListener('popstate', load_section);
 
 function load_section() {
-    let centinela = false;
+    // Reinicia el contador y las animaciones que fueron activadas
+    remove_all_animations()
     number_of_active_animations = 0;
 
+    // Muestra la seccion que tiene un id valido en la URL
+    let loaded_section = false;
     $main_sections.map(($section, index) => {
+        // Remueve la clase activo de la seccion y de sus elementos de navegacion
         $section.classList.remove('active');
         $navbar_options[index].classList.remove('active');
         $menu_options[index].classList.remove('active')
-
-        if (document.location.href.includes($section.id)) {
-            if (!centinela) {
-                $section.classList.add('active');
-                $navbar_options[index].classList.add('active');
-                $menu_options[index].classList.add('active');
-
-                current_section = $section;
-            }
-            centinela = true;
+        // Verifica si el id de la seccion se encuentra en la URL
+        if (document.location.href.includes('#'+$section.id) && loaded_section == false) {
+            // Añade la clase active a los elementos de navegacion y a la seccion correspondiente
+            $section.classList.add('active');
+            $navbar_options[index].classList.add('active');
+            $menu_options[index].classList.add('active');
+            // Define una variable con el elemento / seccion actual
+            current_section = $section;
+            loaded_section = true;
         }
     })
 
-    if (!centinela) {
+    // Si no se encontro ningun id valido en la url redirecciona al inicio
+    if (loaded_section == false) {
+        // Añade la clase active a los elementos de navegacion de la seccion home
         $main_sections[0].classList.add('active');
         $navbar_options[0].classList.add('active');
         $menu_options[0].classList.add('active');
-    }else {
-        remove_animations()
     }
 
-    document.addEventListener('scroll', add_animations);
-    add_animations();
+    // Añade multiples eventos que permitiran espiar los elementos de la seccion actual
+    document.addEventListener('scroll', spy_section_elements);
+    window.addEventListener('onorientationchange', spy_section_elements);
+    window.addEventListener('resize', spy_section_elements);
+
+    // Verfica que elementos se encuentran en pantalla al cargar la seccion
+    setTimeout(spy_section_elements, 1);
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* SCROLL SPY PARA LOS ELEMENTOS EN LA WEB QUE AÑADE Y QUITA UNA CLASE CON UNA ANIMACION */
+/* ------------------------------------------------------------------------------------- */
+
+// Arreglos de elementos a los que definiremos una animacion
+const $home_elements = Array.from(document.querySelectorAll('.main__title--home, .section__header, .section__image__container, .section__link'));
+const $about_elements = Array.from(document.querySelectorAll('.main__title--about, .about__text, .about__title'));
+const $social_elements = Array.from(document.querySelectorAll('.main__title--social, .social__link'));
+const $contact_elements = Array.from(document.querySelectorAll('.main__title--contact, .contact__link'));
+
+function spy_section_elements() {
+    let $section_elements;
+
+    switch (current_section.id) {
+        case 'home':
+            $section_elements = $home_elements;
+            break;
+        case 'about_me':
+            $section_elements = $about_elements;
+            break;
+        case 'social':
+            $section_elements = $social_elements;
+            break;
+        case 'contact':
+            $section_elements = $contact_elements;
+            break;
+    }
+
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    $section_elements.map($element => {
+        if (scrollPosition <= $element.offsetTop && $element.offsetTop - window.innerHeight <= scrollPosition) {
+            if (!$element.classList.contains('fade_in') && 
+                !$element.classList.contains('traslate_y') && 
+                !$element.classList.contains('image_animation')) {
+                add_animation($element);
+            }
+        }
+    })
+
+    if (number_of_active_animations >=  $section_elements.length) remove_events_for_animations();
+}
+
+function add_animation($element) {
+    if ($element.classList.contains('main__title')) {
+        $element.classList.add('traslate_y')
+    }
+    else if ($element.classList.contains('section__image__container') || $element.classList.contains('section__link')) {
+        $element.classList.add('image_animation')
+    }
+    else {
+        $element.classList.add('fade_in');
+    }
+
+    number_of_active_animations++;
+}
+
+function remove_all_animations() {
+    let $section_elements;
+
+    switch (current_section.id) {
+        case 'home':
+            $section_elements = $home_elements;
+            break;
+        case 'about_me':
+            $section_elements = $about_elements;
+            break;
+        case 'social':
+            $section_elements = $social_elements;
+            break;
+        case 'contact':
+            $section_elements = $contact_elements;
+            break;
+    }
+
+    $section_elements.map($element => {
+        $element.classList.remove('fade_in');
+        $element.classList.remove('traslate_y');
+        $element.classList.remove('image_animation');
+    })
+}
+
+function remove_events_for_animations() {
+    document.removeEventListener('scroll', spy_section_elements)
+    window.removeEventListener('onorientationchange', spy_section_elements);
+    window.removeEventListener('resize', spy_section_elements);
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -161,70 +258,4 @@ function show_hide_menu() {
         document.body.classList.remove('overflow__hidden');
         $logo.removeEventListener('click', show_hide_menu)
     }
-}
-
-/* ------------------------------------------------------------------------------------- */
-/* SCROLL SPY PARA LOS ELEMENTOS EN LA WEB QUE AÑADE Y QUITA UNA CLASE CON UNA ANIMACION */
-/* ------------------------------------------------------------------------------------- */
-
-// Arreglos de elementos a los que definiremos una animacion
-const $home_elements = Array.from(document.querySelectorAll('.main__title--home, .section__header, .section__image'));
-const $about_elements = Array.from(document.querySelectorAll('.main__title--about, .about__text, .about__title'));
-const $social_elements = Array.from(document.querySelectorAll('.main__title--social, .social__link'));
-const $contact_elements = Array.from(document.querySelectorAll('.main__title--contact, .contact__link'));
-
-function add_animations() {
-    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    let $section_elements;
-
-    switch (current_section.id) {
-        case 'home':
-            $section_elements = $home_elements;
-            if (number_of_active_animations >=  22) document.removeEventListener('scroll', add_animations);
-            break;
-        case 'about_me':
-            $section_elements = $about_elements;
-            if (number_of_active_animations >=  9) document.removeEventListener('scroll', add_animations);
-            break;
-        case 'social':
-            $section_elements = $social_elements;
-            if (number_of_active_animations >=  5) document.removeEventListener('scroll', add_animations);
-            break;
-        case 'contact':
-            $section_elements = $contact_elements;
-            if (number_of_active_animations >=  4) document.removeEventListener('scroll', add_animations);
-            break;
-    }
-
-    $section_elements.map($element => {
-        if ($element.offsetTop - window.innerHeight <= scrollPosition && scrollPosition <= $element.offsetTop) {
-            if (!$element.classList.contains('fade_in')) {
-                $element.classList.add('fade_in');
-                number_of_active_animations++;
-            }
-        }
-    })
-}
-
-function remove_animations() {
-    let $section_elements;
-
-    switch (current_section.id) {
-        case 'home':
-            $section_elements = $home_elements;
-            break;
-        case 'about_me':
-            $section_elements = $about_elements;
-            break;
-        case 'social':
-            $section_elements = $social_elements;
-            break;
-        case 'contact':
-            $section_elements = $contact_elements;
-            break;
-    }
-
-    $section_elements.map($element => {
-        $element.classList.remove('fade_in')
-    })
 }
