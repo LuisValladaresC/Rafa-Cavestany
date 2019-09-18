@@ -35,12 +35,12 @@
             grid-column: 7 span;
         }
 
-    .section__image__container {
+    .section__link--hero {
         grid-column: 10 span;
         margin: 0;
     }
     @media (max-width: 768px) {
-        .section__image__container {
+        .section__link--hero {
             grid-column: 12 span;
         }
     }

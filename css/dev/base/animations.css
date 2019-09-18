@@ -2,28 +2,97 @@
             ANIMACIONES
 \* --------------------------- */
 
-.traslate_y,
-.traslate_y div {
+/* ----- TITLE ANIMATION ----- */
+
+.main__title,
+.main__title div {
     overflow: hidden;
 }
-
-.traslate_y span {
+.main__title span {
     position: relative;
     bottom: -1em;
-    
-    animation: traslate_y 1s forwards;
 }
-
-@keyframes traslate_y {
+.main__title.animation span {
+    animation: main__title 1s forwards;
+}
+@keyframes main__title {
     100%{
         bottom: 0;
     }
 }
 
-.fade_in {
+/* ----- IMAGE ANIMATION ----- */
+
+.section__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.section__link::before, 
+.section__link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section__link::before {
+    z-index: 100;
+    background-color: var(--color-darkgray);
+}
+.section__link::after {
+    z-index: 200;
+    background-color: var(--color-gray);
+}
+.section__link.animation::before {
+    animation: section__link 250ms 350ms forwards ease-in-out;
+}
+.section__link.animation::after {
+    animation: section__link 250ms forwards ease-in-out;
+}
+
+    .section__link .section__image {
+        transform: scale(1.05);
+    }
+    .section__link.animation .section__image {
+        animation: section__image 500ms 500ms forwards;
+    }
+
+@keyframes section__link {
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes section__image {
+    100% {
+        transform: scale(1)
+    }
+}
+
+/* ------ TEXT ANIMATION ----- */
+
+.navbar__link,
+.navbar__menu {
+    animation: fade_in 250ms;
+}
+
+.section__header,
+.about__text,
+.about__title,
+.social__link,
+.contact__link {
     opacity: 0;
     transform: translateY(10px);
+}
 
+.section__header.animation,
+.about__text.animation,
+.about__title.animation,
+.social__link.animation,
+.contact__link.animation {
     animation: fade_in 1s forwards;
     animation-delay: 250ms;
 }
@@ -36,50 +105,5 @@
     100% {
         opacity: 1;
         transform: translateY(0)
-    }
-}
-
-.image_animation {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-.image_animation::before, 
-.image_animation::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.image_animation::before {
-    z-index: 100;
-    background-color: #3e3e3e;
-    animation: image_animation 250ms 350ms forwards ease-in-out;
-}
-
-.image_animation::after {
-    z-index: 200;
-    background-color: var(--color-gray);
-    animation: image_animation 250ms forwards ease-in-out;
-}
-
-    .image_animation img {
-        transform: scale(1.05);
-        animation: image_animation2 500ms 500ms forwards;
-    }
-
-@keyframes image_animation2 {
-    100% {
-        transform: scale(1)
-    }
-}
-
-@keyframes image_animation {
-    100% {
-        height: 0;
     }
 }
