@@ -2,7 +2,41 @@
             ANIMACIONES
 \* --------------------------- */
 
-/* ----- TITLE ANIMATION ----- */
+/* -------- NAV ITEMS -------- */
+
+.navbar__link,
+.navbar__menu {
+    animation: fade_in 250ms;
+}
+
+.menu__link {
+    opacity: 0;
+    transform: translateY(10px);
+
+    animation: fade_in 250ms forwards;
+}
+ .menu__link--about {
+    animation-delay: 100ms
+}
+ .menu__link--social {
+    animation-delay: 200ms
+}
+ .menu__link--contact {
+    animation-delay: 300ms
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* --------- TITLES ---------- */
 
 .main__title,
 .main__title div {
@@ -21,12 +55,41 @@
     }
 }
 
-/* ----- IMAGE ANIMATION ----- */
+/* ---------- TEXTS ---------- */
+
+.section__header,
+.about__text,
+.about__title,
+.social__link,
+.contact__link {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.section__header.animation,
+.about__text.animation,
+.about__title.animation,
+.social__link.animation,
+.contact__link.animation {
+    animation: text_animation 1s 250ms forwards;
+}
+
+@keyframes text_animation {
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* --------- IMAGES ---------- */
 
 .section__link {
-    display: block;
     position: relative;
     overflow: hidden;
+    transition: 250ms
+}
+.section__link:not(.section__link--hero):hover {
+    transform: scale(1.05)
 }
 
 .section__link::before, 
@@ -47,17 +110,17 @@
     background-color: var(--color-gray);
 }
 .section__link.animation::before {
-    animation: section__link 250ms 350ms forwards ease-in-out;
+    animation: section__link 250ms 650ms forwards ease-in-out;
 }
 .section__link.animation::after {
-    animation: section__link 250ms forwards ease-in-out;
+    animation: section__link 250ms 300ms forwards ease-in-out;
 }
 
     .section__link .section__image {
         transform: scale(1.05);
     }
     .section__link.animation .section__image {
-        animation: section__image 500ms 500ms forwards;
+        animation: section__image 500ms 800ms forwards;
     }
 
 @keyframes section__link {
@@ -69,41 +132,5 @@
 @keyframes section__image {
     100% {
         transform: scale(1)
-    }
-}
-
-/* ------ TEXT ANIMATION ----- */
-
-.navbar__link,
-.navbar__menu {
-    animation: fade_in 250ms;
-}
-
-.section__header,
-.about__text,
-.about__title,
-.social__link,
-.contact__link {
-    opacity: 0;
-    transform: translateY(10px);
-}
-
-.section__header.animation,
-.about__text.animation,
-.about__title.animation,
-.social__link.animation,
-.contact__link.animation {
-    animation: fade_in 1s forwards;
-    animation-delay: 250ms;
-}
-
-@keyframes fade_in {
-    0% {
-        opacity: 0;
-        transform: translateY(10px)
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0)
     }
 }

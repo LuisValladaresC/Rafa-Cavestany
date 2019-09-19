@@ -105,7 +105,6 @@ const $contact_elements = Array.from(document.querySelectorAll('.main__title--co
 
 var $current_section = $main_sections[0];
 var $current_section_elements = $home_elements;
-
 var number_of_active_animations;
 
 window.addEventListener('popstate', load_section);
@@ -152,18 +151,11 @@ function load_section() {
 /* AÑADE UNA ANIMACION DE ENTRADA A CADA ELEMENTO MEDIANTE EL SCROLL SPY Y LAS REMUEVE AL CAMBIAR DE SECCION */
 /* --------------------------------------------------------------------------------------------------------- */
 
-var x = [];
-var timer = 0;
-
 function add_animations() {
-    let delay_spacing = window.innerWidth * 0.15;
-    if (delay_spacing > 170) delay_spacing = 170;
-
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-    $current_section_elements.map($element => {
-        if ($element.offsetTop - window.innerHeight + 50 <= scrollPosition && !$element.classList.contains('section__link') ||
-            $element.offsetTop - window.innerHeight + delay_spacing <= scrollPosition && $element.classList.contains('section__link')) {
+    $current_section_elements.map(($element, i) => {
+        if ($element.offsetTop - window.innerHeight + 50 <= scrollPosition) {
             if (!$element.classList.contains('animation')) {
                 $element.classList.add('animation')
                 number_of_active_animations++;
