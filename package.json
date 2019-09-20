@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build-css": "postcss ./css/dev/index.css -o ./css/public/style.css -w",
+    "build-css": "postcss ./css/dev/index.css -o ./css/public/index.min.css -w",
     "build-js": "webpack --watch"
   },
   "devDependencies": {

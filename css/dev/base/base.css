@@ -7,20 +7,23 @@ html {
 }
 
 body {
+    min-width: 250px;
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 24px;
     background-color: var(--color-gray);
 }
-
-.overflow__hidden {
+body.overflow__hidden {
     overflow: hidden;
 }
 
 .main__section {
     display: none;
 }
-.main__section.active {
+main.home #home,
+main.about_me #about_me,
+main.social #social,
+main.contact #contact {
     display: grid;
 }
 
