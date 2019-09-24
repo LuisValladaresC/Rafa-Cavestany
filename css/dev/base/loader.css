@@ -12,6 +12,7 @@
 
     padding: 21px 24px;
     background-color: #F4F4F4;
+    box-sizing: border-box;
 
     display: flex;
     justify-content: center;
@@ -20,15 +21,10 @@
     transition: 1s;
     transition-property: width;
 }
-/* @media (max-width: 475px) {
-    #loader {
-        padding-top: 32px; 
-    }
-} */
 
 #loader.hidden {
-    width: 25px;
-    height: 17px;
+    width: calc(25px + 48px);
+    height: calc(17px + 42px);
     background-color: transparent;
     animation: loading__end 2s forwards;
 }

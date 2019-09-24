@@ -108,7 +108,7 @@ function show_loaded_HTML() {
 const $main_sections = Array.from(document.getElementsByClassName('main__section'));
 
 const $home_elements = Array.from(document.querySelectorAll('.main__title--home, .section__header, .section__link'));
-const $about_elements = Array.from(document.querySelectorAll('.main__title--about, .about__text, .about__title'));
+const $about_elements = Array.from(document.querySelectorAll('.main__title--about, .about__content'));
 const $social_elements = Array.from(document.querySelectorAll('.main__title--social, .social__link'));
 const $contact_elements = Array.from(document.querySelectorAll('.main__title--contact, .contact__link'));
 
@@ -138,6 +138,8 @@ function load_section() {
     else if ($current_section.id == 'about_me') $current_section_elements = $about_elements;
     else if ($current_section.id == 'social') $current_section_elements = $social_elements;
     else if ($current_section.id == 'contact') $current_section_elements = $contact_elements;
+
+    window.scrollTo(0, 0);
 
     /* ------------------------------------------------------------------------------------------------ */
     /* AÑADE UNA ANIMACION DE ENTRADA A CADA ELEMENTO HMTL DE LA SECCION ACTUAL AL APARECER EN PANTALLA */

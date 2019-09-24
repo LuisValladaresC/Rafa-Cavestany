@@ -87,9 +87,9 @@
         }
 
         .about__title {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 1.57;
+            font-size: 19px;
+            font-weight: 700;
+            /* line-height: 1.57; */
         }
 
     /* ----- SOCIAL / CONTACT ---- */

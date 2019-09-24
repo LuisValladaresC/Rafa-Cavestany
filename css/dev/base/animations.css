@@ -47,7 +47,7 @@
     bottom: -1em;
 }
 .main__title.animation span {
-    animation: main__title 1s forwards;
+    animation: main__title 0.5s forwards;
 }
 @keyframes main__title {
     100%{
@@ -58,8 +58,7 @@
 /* ---------- TEXTS ---------- */
 
 .section__header,
-.about__text,
-.about__title,
+.about__content,
 .social__link,
 .contact__link {
     opacity: 0;
@@ -67,8 +66,7 @@
 }
 
 .section__header.animation,
-.about__text.animation,
-.about__title.animation,
+.about__content.animation,
 .social__link.animation,
 .contact__link.animation {
     animation: text_animation 1s 250ms forwards;
