@@ -1,0 +1,15 @@
+@import './normalize.css';
+@import './loader.css';
+
+@import './tipografia.css';
+@import './variables.css';
+@import './base.css';
+@import './animations.css';
+
+@import './header.css';
+@import './home.css';
+@import './footer.css'; 
+@import './about.css'; 
+@import './social.css'; 
+
+@import './mobile.css';

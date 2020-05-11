@@ -1,21 +1,21 @@
 {
   "scripts": {
-    "build-css": "postcss ./css/dev/index.css -o ./css/public/index.min.css -w",
+    "build-css": "postcss ./assets/css/dev/index.css -o ./assets/css/public/index.min.css -w",
     "build-js": "webpack --watch"
   },
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "postcss-cli": "^6.1.2",
-    "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.6.0",
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5"
+    "cssnano": "4.1.10",
+    "postcss-cli": "6.1.2",
+    "postcss-import": "12.0.1",
+    "postcss-preset-env": "6.6.0",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "babel-loader": "8.0.6",
+    "webpack": "4.35.0",
+    "webpack-cli": "3.3.5"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4"
+    "@babel/polyfill": "7.4.4"
   }
 }

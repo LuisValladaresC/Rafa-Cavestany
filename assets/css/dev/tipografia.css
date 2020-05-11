@@ -6,7 +6,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Hair"), local("Fakt-Pro-Hair"),
-    url('../../../src/fonts/FaktPro-Hair.woff');
+    url('../../fonts/FaktPro-Hair.woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -15,7 +15,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Th"), local("Fakt-Pro-Th"),
-    url('../../../src/fonts/FaktPro-Thin.woff');
+    url('../../fonts/FaktPro-Thin.woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Lt"), local("Fakt-Pro-Lt"),
-    url('../../../src/fonts/FaktPro-Light.woff');
+    url('../../fonts/FaktPro-Light.woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Bln"), local("Fakt-Pro-Bln"),
-    url('../../../src/fonts/FaktPro-Blond.woff');
+    url('../../fonts/FaktPro-Blond.woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -42,7 +42,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Nor"), local("Fakt-Pro-Nor"),
-    url('../../../src/fonts/FaktPro-Normal.woff');
+    url('../../fonts/FaktPro-Normal.woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -51,7 +51,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro Med"), local("Fakt-Pro-Med"),
-    url('../../../src/fonts/FaktPro-Medium.woff');
+    url('../../fonts/FaktPro-Medium.woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -60,7 +60,7 @@
 @font-face {
     font-family: 'FaktPro';
     src: local("Fakt Pro SmBd"), local("Fakt-Pro-SmBd"),
-    url('../../../src/fonts/FaktPro-SemiBold.woff');
+    url('../../fonts/FaktPro-SemiBold.woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;

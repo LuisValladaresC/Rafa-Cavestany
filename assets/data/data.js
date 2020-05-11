@@ -4,58 +4,58 @@ const DATA = {
         {
             "title": "Radical Candor",
             "link": "https://www.amazon.com/Radical-Candor-Kim-Scott/dp/B01KTIEFEE",
-            "image": "src/images/books/book-1.png",
-            "image2x": "src/images/books/book-1@2x.png",
-            "image3x": "src/images/books/book-1@3x.png"
+            "image": "assets/images/books/book-1.png",
+            "image2x": "assets/images/books/book-1@2x.png",
+            "image3x": "assets/images/books/book-1@3x.png"
         },
         {
             "title": "Hacking Growth",
             "link": "https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout-ebook/dp/B01IZTCF6Y",
-            "image": "src/images/books/book-2.png",
-            "image2x": "src/images/books/book-2@2x.png",
-            "image3x": "src/images/books/book-2@3x.png"
+            "image": "assets/images/books/book-2.png",
+            "image2x": "assets/images/books/book-2@2x.png",
+            "image3x": "assets/images/books/book-2@3x.png"
         },
         {
             "title": "Measure What Matters",
             "link": "https://www.amazon.com/Measure-What-Matters-Google-Foundation-ebook/dp/B078FZ9SYB",
-            "image": "src/images/books/book-3.png",
-            "image2x": "src/images/books/book-3@2x.png",
-            "image3x": "src/images/books/book-3@3x.png"
+            "image": "assets/images/books/book-3.png",
+            "image2x": "assets/images/books/book-3@2x.png",
+            "image3x": "assets/images/books/book-3@3x.png"
         },
         {
             "title": "The Stranger",
             "link": "https://www.amazon.com/Stranger-Vintage-International-Albert-Camus-ebook/dp/B008QLXSG8",
-            "image": "src/images/books/book-4.png",
-            "image2x": "src/images/books/book-4@2x.png",
-            "image3x": "src/images/books/book-4@3x.png"
+            "image": "assets/images/books/book-4.png",
+            "image2x": "assets/images/books/book-4@2x.png",
+            "image3x": "assets/images/books/book-4@3x.png"
         },
         {
             "title": "Who Owns the Future?",
             "link": "https://www.amazon.com/Who-Owns-Future-Jaron-Lanier-ebook/dp/B008J2AEY8",
-            "image": "src/images/books/book-5.png",
-            "image2x": "src/images/books/book-5@2x.png",
-            "image3x": "src/images/books/book-5@3x.png"
+            "image": "assets/images/books/book-5.png",
+            "image2x": "assets/images/books/book-5@2x.png",
+            "image3x": "assets/images/books/book-5@3x.png"
         },
         {
             "title": "Traction",
             "link": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2",
-            "image": "src/images/books/book-6.png",
-            "image2x": "src/images/books/book-6@2x.png",
-            "image3x": "src/images/books/book-6@3x.png"
+            "image": "assets/images/books/book-6.png",
+            "image2x": "assets/images/books/book-6@2x.png",
+            "image3x": "assets/images/books/book-6@3x.png"
         },
         {
             "title": "Steal Like an Artist",
             "link": "https://www.amazon.com/Steal-Like-Artist-Things-Creative-ebook/dp/B0074QGGK6",
-            "image": "src/images/books/book-7.png",
-            "image2x": "src/images/books/book-7@2x.png",
-            "image3x": "src/images/books/book-7@3x.png"
+            "image": "assets/images/books/book-7.png",
+            "image2x": "assets/images/books/book-7@2x.png",
+            "image3x": "assets/images/books/book-7@3x.png"
         },
         {
             "title": "Todo es Personal",
             "link": "https://www.amazon.com/Todo-Personal-Relaciones-Alcanzar-Spanish-ebook/dp/B00JLL1S1E",
-            "image": "src/images/books/book-8.png",
-            "image2x": "src/images/books/book-8@2x.png",
-            "image3x": "src/images/books/book-8@3x.png"
+            "image": "assets/images/books/book-8.png",
+            "image2x": "assets/images/books/book-8@2x.png",
+            "image3x": "assets/images/books/book-8@3x.png"
         },
     ],
 
@@ -64,65 +64,65 @@ const DATA = {
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-1.png",
-            "image2x": "src/images/music/music-1@2x.png",
-            "image3x": "src/images/music/music-1@3x.png"
+            "image": "assets/images/music/music-1.png",
+            "image2x": "assets/images/music/music-1@2x.png",
+            "image3x": "assets/images/music/music-1@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-2.png",
-            "image2x": "src/images/music/music-2@2x.png",
-            "image3x": "src/images/music/music-2@3x.png"
+            "image": "assets/images/music/music-2.png",
+            "image2x": "assets/images/music/music-2@2x.png",
+            "image3x": "assets/images/music/music-2@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-3.png",
-            "image2x": "src/images/music/music-3@2x.png",
-            "image3x": "src/images/music/music-3@3x.png"
+            "image": "assets/images/music/music-3.png",
+            "image2x": "assets/images/music/music-3@2x.png",
+            "image3x": "assets/images/music/music-3@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-4.png",
-            "image2x": "src/images/music/music-4@2x.png",
-            "image3x": "src/images/music/music-4@3x.png"
+            "image": "assets/images/music/music-4.png",
+            "image2x": "assets/images/music/music-4@2x.png",
+            "image3x": "assets/images/music/music-4@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-5.png",
-            "image2x": "src/images/music/music-5@2x.png",
-            "image3x": "src/images/music/music-5@3x.png"
+            "image": "assets/images/music/music-5.png",
+            "image2x": "assets/images/music/music-5@2x.png",
+            "image3x": "assets/images/music/music-5@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-6.png",
-            "image2x": "src/images/music/music-6@2x.png",
-            "image3x": "src/images/music/music-6@3x.png"
+            "image": "assets/images/music/music-6.png",
+            "image2x": "assets/images/music/music-6@2x.png",
+            "image3x": "assets/images/music/music-6@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-7.png",
-            "image2x": "src/images/music/music-7@2x.png",
-            "image3x": "src/images/music/music-7@3x.png"
+            "image": "assets/images/music/music-7.png",
+            "image2x": "assets/images/music/music-7@2x.png",
+            "image3x": "assets/images/music/music-7@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-8.png",
-            "image2x": "src/images/music/music-8@2x.png",
-            "image3x": "src/images/music/music-8@3x.png"
+            "image": "assets/images/music/music-8.png",
+            "image2x": "assets/images/music/music-8@2x.png",
+            "image3x": "assets/images/music/music-8@3x.png"
         },
         {
             "title": "",
             "link": "https://www.spotify.com",
-            "image": "src/images/music/music-9.png",
-            "image2x": "src/images/music/music-9@2x.png",
-            "image3x": "src/images/music/music-9@3x.png"
+            "image": "assets/images/music/music-9.png",
+            "image2x": "assets/images/music/music-9@2x.png",
+            "image3x": "assets/images/music/music-9@3x.png"
         },
     ],
 
